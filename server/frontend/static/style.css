@@ -116,7 +116,7 @@ img{
 }
 
 .img_icon {
-  align-self: center;
+    align-self: center;
     width:40px;
     background-color:#0C9;
     color:#FFF;
@@ -128,7 +128,7 @@ img{
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
+    height: 10vh; /* Full viewport height */
     margin: 0; /* Remove default margin */
 }
 
@@ -136,16 +136,17 @@ img{
     display: flex;
     flex-direction: column;
     margin: 1% 5%; /* Combine margins */
-    border: 1px solid #ddd; /* Light border color */
+    border: 1px solid #c6bcbc; /* Light border color */
     border-radius: 60px; /* Soft corners */
-    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    box-shadow: 3px 4px 8px rgba(12, 11, 11, 0.262); /* Shadow effect */
     padding: 20px; /* Space inside the box */
     background-color: #fff; /* Background color */
     position: relative; /* For absolute positioning of child elements */
-    width: 100%; /* Ensure it fits within the margins */
-    max-width: 1500px; /* Optional: Limit max width */
-    height: 900px; /* Optional: Set height to ensure proper layout */
+    width: 90%; /* Ensure it fits within the margins */
+    max-width: 1400px; /* Optional: Limit max width */
+    height: 800px; /* Optional: Set height to ensure proper layout */
     box-sizing: border-box;
+    
 }
 
 /* Image styling */
@@ -166,31 +167,40 @@ img{
 .contact-card .contact-content {
     display: flex;
     flex-direction: row;
-    height: calc(50% - 10px); /* Remaining space minus divider height */
-    align-items: center; /* Center items vertically */
+    align-items: center;
+    justify-content: space-between;
     position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Allow wrapping of content */
 }
 
 /* Vertical divider between contact image and contact details */
 .contact-card .vertical-divider {
-    border-left: 5px solid #333; /* Darker vertical line */ 
+    flex-grow: 1;
+    border-left: 3px solid #333; /* Darker vertical line */ 
     height: 80%; /* Adjust height as needed */
     margin: 0 10px; /* Space around the vertical divider */
 }
 
 /* Contact image positioning */
 .contact-card .contact-image {
-    flex: 1;
+    flex-grow:1;
     background-color: white;
     border: 0px solid #ddd;
-    padding: 10px;
+    padding: 0px;
     border-radius: 5px; /* Optional: Soft corners for contact image container */
+    text-align: center;
 }
 
 /* Contact details positioning */
 .contact-card .contact-details {
     flex-grow: 1;
     background-color: white;
-    font-size: 15px;
+    font-size: 18px;
     color: cornflowerblue;
+    border: 0px solid #ddd;
+    padding: 10px;
+    line-height: 0.5;
+    text-align: center;
 }
