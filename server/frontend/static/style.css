@@ -124,3 +124,73 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+.contact-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    margin: 1% 5%; /* Combine margins */
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 60px; /* Soft corners */
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px; /* Space inside the box */
+    background-color: #fff; /* Background color */
+    position: relative; /* For absolute positioning of child elements */
+    width: 100%; /* Ensure it fits within the margins */
+    max-width: 1500px; /* Optional: Limit max width */
+    height: 900px; /* Optional: Set height to ensure proper layout */
+    box-sizing: border-box;
+}
+
+/* Image styling */
+.contact-card .card-img-top {
+    width: 60%;
+    height: 50%; /* Upper half */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-bottom: 1px solid #ddd; /* Optional: Border between images and content */
+}
+
+/* Divider line between upper and lower sections */
+.contact-card .divider {
+    border-bottom: 2px solid #ddd; /* Line between sections */
+    margin: 10px 0; /* Space around the divider */
+}
+
+/* Container for the contact image and details */
+.contact-card .contact-content {
+    display: flex;
+    flex-direction: row;
+    height: calc(50% - 10px); /* Remaining space minus divider height */
+    align-items: center; /* Center items vertically */
+    position: relative;
+}
+
+/* Vertical divider between contact image and contact details */
+.contact-card .vertical-divider {
+    border-left: 5px solid #333; /* Darker vertical line */ 
+    height: 80%; /* Adjust height as needed */
+    margin: 0 10px; /* Space around the vertical divider */
+}
+
+/* Contact image positioning */
+.contact-card .contact-image {
+    flex: 1;
+    background-color: white;
+    border: 0px solid #ddd;
+    padding: 10px;
+    border-radius: 5px; /* Optional: Soft corners for contact image container */
+}
+
+/* Contact details positioning */
+.contact-card .contact-details {
+    flex-grow: 1;
+    background-color: white;
+    font-size: 15px;
+    color: cornflowerblue;
+}
