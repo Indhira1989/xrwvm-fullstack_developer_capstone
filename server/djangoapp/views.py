@@ -103,7 +103,8 @@ def get_cars(request):
             {"CarModel": car_model.name, "CarMake": car_model.car_make.name}
         )
     return JsonResponse({"CarModels": cars})
-    
+
+
 # Update the `get_dealerships` render list of dealerships all by default,
 # particular state if state is passed
 def get_dealerships(request, state="All"):
@@ -113,7 +114,8 @@ def get_dealerships(request, state="All"):
         endpoint = "/fetchDealers/"+state
     dealerships = get_request(endpoint)
     return JsonResponse({"status": 200, "dealers": dealerships})
-    
+
+
 # Create a `get_dealer_reviews` view to render the reviews of a dealer
 def get_dealer_reviews(request, dealer_id):
     # if dealer id has been provided
@@ -127,7 +129,8 @@ def get_dealer_reviews(request, dealer_id):
         return JsonResponse({"status": 200, "reviews": reviews})
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
-        
+
+
 def get_dealer_details(request, dealer_id):
     if (dealer_id):
         endpoint = "/fetchDealer/"+str(dealer_id)
@@ -135,7 +138,8 @@ def get_dealer_details(request, dealer_id):
         return JsonResponse({"status": 200, "dealer": dealership})
     else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
-        
+
+
 def add_review(request):
     if (request.user.is_anonymous == False):
         data = json.loads(request.body)
