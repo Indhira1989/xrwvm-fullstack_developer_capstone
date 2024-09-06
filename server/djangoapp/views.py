@@ -63,7 +63,6 @@ def registration(request):
     last_name = data['lastName']
     email = data['email']
     username_exist = False
-    #email_exist = False
     try:
         # Check if user already exists
         User.objects.get(username=username)
@@ -73,7 +72,7 @@ def registration(request):
         logger.debug("{} is new user".format(username))
 
     # If it is a new user
-    if not username_exist :
+    if not username_exist:
         # Create user in auth_user table
         user = User.objects.create_user(
                       username=username,
@@ -87,10 +86,9 @@ def registration(request):
         login(request, user)
         data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
-    else :
+    else:
         data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
-
 
 
 def get_cars(request):
